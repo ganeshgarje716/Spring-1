@@ -8,6 +8,13 @@ public class PaymentService {
 	CreditCardPayment credit;
 	
 	
+	public PaymentService(UPIPayment upi, CreditCardPayment credit) {
+		
+		this.upi=upi;
+		this.credit=credit;
+	}
+	
+	
 	public void pay(double amount, String type) {
 		
 		if (type.equals("UPI")) {
