@@ -3,7 +3,22 @@ package com.Gpay;
 public class PaymentService {
 	
 	
-	public void pay(double amount) {
+	UPIPayment upi;
+	
+	CreditCardPayment credit;
+	
+	
+	public void pay(double amount, String type) {
+		
+		if (type.equals("UPI")) {
+			
+			upi.processPayment(amount);
+		}
+		if (type.equals("CREDIT")) {
+			
+			credit.processPayment(amount);
+		}
+		
 		
 		System.out.println("Payment Success ... RS = "+amount);
 		
