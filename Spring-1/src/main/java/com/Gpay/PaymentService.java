@@ -8,11 +8,17 @@ public class PaymentService {
 	CreditCardPayment credit;
 	
 	
-	public PaymentService(UPIPayment upi, CreditCardPayment credit) {
+	public void setPayment(UPIPayment upi, CreditCardPayment credit) {
 		
 		this.upi=upi;
-		this.credit=credit;
+    	this.credit=credit;
 	}
+	
+//	public PaymentService(UPIPayment upi, CreditCardPayment credit) {
+//		
+//		this.upi=upi;
+//		this.credit=credit;
+//	}
 	
 	
 	public void pay(double amount, String type) {
